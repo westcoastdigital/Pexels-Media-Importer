@@ -19,6 +19,25 @@ define('PMI_PLUGIN_URL', plugin_dir_url(__FILE__));
 
 define('PMI_LOGO', '<svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" idth="28" height="28"  viewBox="0 0 165.34 165.53"><defs><style>.cls-1 {fill: #000;stroke-width: 0}</style></defs><g id="Layer_1-2"><path d="M74.13 111.77c9.35 0 18.38.87 27.19-.17 21.12-2.51 36.95-22.14 35.84-43.29-1.15-21.94-18.27-38.91-40.54-40.18-20.63-1.18-40.08 14.8-42.89 35.74-.92 6.86-.57 13.89-.77 20.85-.06 2.11 0 4.22 0 6.57H.09v-4.71c0-17.92-.04-35.84.02-53.75C.17 13.71 13.93.04 33.15.02c33-.03 66-.03 98.99 0 19.5.02 33.15 13.66 33.17 33.17.03 33.02.04 66.03 0 99.05-.02 19.5-13.66 33.07-33.23 33.1-19.21.03-38.42 0-57.95 0v-53.58Z" class="cls-1" /><path d="M.1 112.65h52.54v52.81c-11.22-.98-22.56 2.07-33.31-2.82C7.22 157.14.75 147.57.16 134.3c-.32-7.07-.06-14.17-.06-21.65M73.95 91.51c0-8.26-.57-16.06.13-23.74 1.04-11.31 11.41-19.59 22.41-18.78 11.16.82 20.07 10.45 19.91 21.54-.15 11.11-9.11 20.45-20.49 20.93-7.1.3-14.22.06-21.96.06Z" class="cls-1" /></g></svg>');
 
+// ============================================
+// GitHub Auto-Updater Integration
+// ============================================
+require_once SIMPLI_DEBUG_PATH . 'github-updater.php';
+
+if (class_exists('SimpliWeb_GitHub_Updater')) {
+    $updater = new SimpliWeb_GitHub_Updater(__FILE__);
+    $updater->set_username('westcoastdigital');
+    $updater->set_repository('Pexels-Media-Importer');
+    
+    // For private repos, uncomment and add your token:
+    // if (defined('GITHUB_ACCESS_TOKEN')) {
+    //     $updater->authorize(GITHUB_ACCESS_TOKEN);
+    // }
+    
+    $updater->initialize();
+}
+// ============================================
+
 // ---------------------------------------------------------------------------
 // Admin menu
 // ---------------------------------------------------------------------------
