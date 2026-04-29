@@ -4,7 +4,7 @@
  * Plugin Name: Pexels Media Importer
  * Plugin URI:  https://github.com/your-repo/pexels-media-importer
  * Description: Search Pexels.com and import images directly into your WordPress Media Library.
- * Version:     1.2.0
+ * Version:     1.2.1
  * Author:      Jon Mather
  * Author URI:  https://jonmather.au
  * License:     GPL-2.0+
@@ -13,7 +13,7 @@
 
 defined('ABSPATH') || exit;
 
-define('PMI_VERSION', '1.2.0');
+define('PMI_VERSION', '1.2.1');
 define('PMI_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('PMI_PLUGIN_URL', plugin_dir_url(__FILE__));
 
