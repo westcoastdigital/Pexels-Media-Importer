@@ -22,7 +22,7 @@ define('PMI_LOGO', '<svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" idth="2
 // ============================================
 // GitHub Auto-Updater Integration
 // ============================================
-require_once SIMPLI_DEBUG_PATH . 'github-updater.php';
+require_once PMI_PLUGIN_DIR . 'github-updater.php';
 
 if (class_exists('SimpliWeb_GitHub_Updater')) {
     $updater = new SimpliWeb_GitHub_Updater(__FILE__);
